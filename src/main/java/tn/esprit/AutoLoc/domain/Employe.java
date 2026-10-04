@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Collection;
+
 @Entity
 @Getter
 @Setter
@@ -24,4 +26,6 @@ public class Employe {
     private RoleEmploye role;
 
 
+    @ManyToOne
+    private Agence agence;
 }
