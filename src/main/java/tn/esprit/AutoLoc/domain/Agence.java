@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -26,9 +26,9 @@ public class Agence {
 
     private String telephone;
     @OneToMany ( mappedBy = "agence")
-    private List <Employe> employe;
+    private Set <Employe> employe;
 
     @OneToMany(mappedBy = "agence")
-    private List <Vehicule> vehicules;
+    private Set <Vehicule> vehicules;
 
 }

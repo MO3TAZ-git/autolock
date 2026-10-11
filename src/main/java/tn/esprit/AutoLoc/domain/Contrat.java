@@ -8,7 +8,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -28,5 +28,5 @@ public class Contrat {
     @OneToOne
     Reservation reservation;
     @OneToMany(mappedBy = "contrat")
-    private List<Paiement> paiements;
+    private Set<Paiement> paiements;
 }

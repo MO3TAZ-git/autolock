@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -33,7 +33,7 @@ public class Vehicule {
     @Enumerated(EnumType.STRING)
     private StatutVehicule statut;
     @ManyToMany
-    List<Equipement> equipements;
+    Set<Equipement> equipements;
     @ManyToOne
     private Agence agence;
 }
